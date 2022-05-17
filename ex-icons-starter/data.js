@@ -121,9 +121,13 @@ const animals = [
 // Partendo dalla struttura dati fornita, visualizzare in pagina un box per ogni icona, in cui è presente il nome dell'icona e l'icona stessa.
 const pageContent = document.getElementById("content");
 
-let animalFamily = animals.forEach((elm) => {
-	console.log(`
-	${elm.family}`);
+animals.forEach((elm) => {
+	post = `<div class="iconCard">
+                <i class="fa-solid fa-${elm.name}"></i>
+            </div>
+	`
+	pageContent.innerHTML += post;
+
 });
 
 
