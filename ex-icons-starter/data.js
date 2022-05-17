@@ -144,12 +144,16 @@ const imageFilter = document.getElementById("select");
 imageFilter.addEventListener("change", function () {
 	if (imageFilter.value === "animal") {
 		font = fonts.filter((elm) => elm.type === "animal");
+		pageContent.innerHTML = "";
 	} else if (imageFilter.value === "vegetables") {
 		font = fonts.filter((elm) => elm.type === "vegetable");
+		pageContent.innerHTML = "";
 	} else if (imageFilter.value === "user") {
 		font = fonts.filter((elm) => elm.type === "user");
+		pageContent.innerHTML = "";
 	} else
-		return true;
+		font = fonts;
+	pageContent.innerHTML = "";
 	font.forEach((elm) => {
 		post = `<div class="iconCard">
 					<i class="fa-solid fa-${elm.name} ${elm.color}"></i>
