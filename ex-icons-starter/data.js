@@ -125,15 +125,15 @@ const pageContent = document.getElementById("content");
 // Ciascuna icona ha una proprietà "color": utilizzare questa proprietà per visualizzare le icone del colore corrispondente.
 
 
-fonts.forEach((elm) => {
-	post = `<div class="iconCard">
-                <i class="fa-solid fa-${elm.name} ${elm.color}"></i>
-				<span>${elm.name}</span>
-            </div>
-	`
-	pageContent.innerHTML += post;
+// font.forEach((elm) => {
+// 	post = `<div class="iconCard">
+//                 <i class="fa-solid fa-${elm.name} ${elm.color}"></i>
+// 				<span>${elm.name}</span>
+//             </div>
+// 	`
+// 	pageContent.innerHTML += post;
 
-});
+// });
 
 
 
@@ -143,10 +143,24 @@ const imageFilter = document.getElementById("select");
 
 imageFilter.addEventListener("change", function () {
 	if (imageFilter.value === "animal") {
+		font = fonts.filter((elm) => elm.type === "animal");
+	} else if (imageFilter.value === "vegetables") {
+		font = fonts.filter((elm) => elm.type === "vegetable");
+	} else if (imageFilter.value === "user") {
+		font = fonts.filter((elm) => elm.type === "user");
+	} else
+		return true;
+	font.forEach((elm) => {
+		post = `<div class="iconCard">
+					<i class="fa-solid fa-${elm.name} ${elm.color}"></i>
+					<span>${elm.name}</span>
+				</div>
+		`
+		pageContent.innerHTML += post;
+	});
+});
 
-	}
-})
-
+// const benzina = auto.filter((elm) => elm.alimentazione === "benzina");
 // BONUS
 // 1- modificare la struttura dati fornita e valorizzare la proprietà "color" in modo dinamico: generare in modo casuale un codice colore, sapendo che la notazione esadecimale è formata dal simbolo "#" seguito da 6 caratteri alfanumerici compresi tra 0 e 9 e A e F.
 // 2- popolare le options della select della milestone 3 dinamicamente.
