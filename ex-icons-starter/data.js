@@ -120,15 +120,14 @@ const animals = [
 // Milestone 1
 // Partendo dalla struttura dati fornita, visualizzare in pagina un box per ogni icona, in cui è presente il nome dell'icona e l'icona stessa.
 const pageContent = document.getElementById("content");
-const colorClass = document.getElementsByTagName("i");
+
 
 animals.forEach((elm) => {
 	post = `<div class="iconCard">
-                <i class="fa-solid fa-${elm.name}"></i>
+                <i class="fa-solid fa-${elm.name} ${elm.color}"></i>
             </div>
 	`
 	pageContent.innerHTML += post;
-	colorClass.classList.add(`.${elm.color}`);
 
 });
 
