@@ -128,7 +128,7 @@ animals.forEach((elm) => {
             </div>
 	`
 	pageContent.innerHTML += post;
-	colorClass.style.color = `${elm.name}`;
+	colorClass.style.color = `${elm.color}`;
 
 
 });
