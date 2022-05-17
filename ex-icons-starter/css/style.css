@@ -20,6 +20,7 @@
 .iconCard {
     margin-top: 50px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 40px;
@@ -39,4 +40,11 @@
 
 .blue {
     color: blue;
+}
+
+span {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 5px;
+    text-transform: uppercase;
 }
