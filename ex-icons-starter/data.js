@@ -1,6 +1,6 @@
 
 
-const animals = [
+const fonts = [
 	{
 		name: 'cat',
 		prefix: 'fa-',
@@ -125,7 +125,7 @@ const pageContent = document.getElementById("content");
 // Ciascuna icona ha una proprietà "color": utilizzare questa proprietà per visualizzare le icone del colore corrispondente.
 
 
-animals.forEach((elm) => {
+fonts.forEach((elm) => {
 	post = `<div class="iconCard">
                 <i class="fa-solid fa-${elm.name} ${elm.color}"></i>
 				<span>${elm.name}</span>
@@ -139,6 +139,14 @@ animals.forEach((elm) => {
 
 // Milestone 3
 // Aggiungere alla pagina una select in cui le options corrispondono ai vari tipi di icone (animal, vegetable, user). Quando l'utente seleziona un tipo dalla select, visualizzare solamente le icone corrispondenti.
+const imageFilter = document.getElementById("select");
+
+imageFilter.addEventListener("change", function () {
+	if (imageFilter.value === "animal") {
+
+	}
+})
+
 // BONUS
 // 1- modificare la struttura dati fornita e valorizzare la proprietà "color" in modo dinamico: generare in modo casuale un codice colore, sapendo che la notazione esadecimale è formata dal simbolo "#" seguito da 6 caratteri alfanumerici compresi tra 0 e 9 e A e F.
 // 2- popolare le options della select della milestone 3 dinamicamente.
