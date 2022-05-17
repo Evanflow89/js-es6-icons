@@ -126,10 +126,9 @@ animals.forEach((elm) => {
 	post = `<div class="iconCard">
                 <i class="fa-solid fa-${elm.name}"></i>
             </div>
-			
 	`
 	pageContent.innerHTML += post;
-	`colorClass.style.color = "${elm.color}"`;
+	post.querySelector("i").classList.add(`${elm.color}`);
 
 });
 
