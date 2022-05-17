@@ -1,4 +1,6 @@
-[
+
+
+const animals = [
 	{
 		name: 'cat',
 		prefix: 'fa-',
@@ -117,6 +119,14 @@
 
 // Milestone 1
 // Partendo dalla struttura dati fornita, visualizzare in pagina un box per ogni icona, in cui è presente il nome dell'icona e l'icona stessa.
+const pageContent = document.getElementById("content");
+
+let animalFamily = animals.forEach((elm) => {
+	console.log(`
+	${elm.family}`);
+});
+
+
 // Milestone 2
 // Ciascuna icona ha una proprietà "color": utilizzare questa proprietà per visualizzare le icone del colore corrispondente.
 // Milestone 3
