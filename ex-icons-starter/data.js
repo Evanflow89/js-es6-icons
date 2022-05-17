@@ -142,7 +142,7 @@ const pageContent = document.getElementById("content");
 const imageFilter = document.getElementById("select");
 
 imageFilter.addEventListener("change", function () {
-	if (imageFilter.value === "animal") {
+	if (imageFilter.value === "all") {
 		font = fonts.filter((elm) => elm.type === "animal");
 		pageContent.innerHTML = "";
 	} else if (imageFilter.value === "vegetables") {
